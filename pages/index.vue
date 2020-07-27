@@ -29,7 +29,7 @@
             <v-card-title>{{ item.productName }}</v-card-title>
             <v-card-text>
               <div>
-                100$
+                {{ item.price }}
               </div>
               <v-row align="center" class="mx-0">
                 <v-rating
@@ -45,7 +45,7 @@
               </v-row>
 
               <div>
-                {{ item.detiel }}
+                {{ item.detail }}
               </div>
             </v-card-text>
 
@@ -84,95 +84,103 @@ export default {
         {
           id: 1,
           productName: 'chair',
-          detiel: 'รายละเอียดสินค้า',
+          detail: 'รายละเอียดสินค้า',
+          price: '100$',
           src:
             'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQSPAYBDq_ogHF22hywk1jNI_TS_EgpYhMA6w&usqp=CAU',
         },
         {
           id: 2,
           productName: 'chair2',
-          detiel: 'รายละเอียดสินค้า2',
+          detail: 'รายละเอียดสินค้า2',
+          price: '250$',
           src: 'https://www.mangosiam.com/images/slide/2.jpg',
         },
         {
           id: 3,
           productName: 'chair3',
-          detiel: 'รายละเอียดสินค้า3',
+          price: '350$',
+          detail: 'รายละเอียดสินค้า3',
         },
         {
           id: 4,
           productName: 'chair4',
-          detiel: 'รายละเอียดสินค้า3',
+          price: '150$',
+          detail: 'รายละเอียดสินค้า3',
         },
         {
           id: 5,
           productName: 'chair5',
-          detiel: 'รายละเอียดสินค้า3',
+          price: '400$',
+          detail: 'รายละเอียดสินค้า3',
         },
         {
           id: 6,
           productName: 'chair6',
-          detiel: 'รายละเอียดสินค้า3',
+          price: '65$',
+          detail: 'รายละเอียดสินค้า3',
         },
         {
           id: 7,
           productName: 'chair7',
-          detiel: 'รายละเอียดสินค้า3',
+          price: '350$',
+          detail: 'รายละเอียดสินค้า3',
         },
         {
           id: 8,
           productName: 'chair8',
-          detiel: 'รายละเอียดสินค้า3',
+          detail: 'รายละเอียดสินค้า3',
+          price: '350$',
         },
         {
           id: 9,
           productName: 'chair8',
-          detiel: 'รายละเอียดสินค้า3',
+          detail: 'รายละเอียดสินค้า3',
         },
         {
           id: 10,
           productName: 'chair8',
-          detiel: 'รายละเอียดสินค้า3',
+          detail: 'รายละเอียดสินค้า3',
         },
         {
           id: 11,
           productName: 'chair8',
-          detiel: 'รายละเอียดสินค้า3',
+          detail: 'รายละเอียดสินค้า3',
         },
         {
           id: 12,
           productName: 'chair8',
-          detiel: 'รายละเอียดสินค้า3',
+          detail: 'รายละเอียดสินค้า3',
         },
         {
           id: 13,
           productName: 'chair8',
-          detiel: 'รายละเอียดสินค้า3',
+          detail: 'รายละเอียดสินค้า3',
         },
         {
           id: 14,
           productName: 'chair8',
-          detiel: 'รายละเอียดสินค้า3',
+          detail: 'รายละเอียดสินค้า3',
         },
         {
           id: 15,
           productName: 'chair15',
-          detiel: 'รายละเอียดสินค้า3',
+          detail: 'รายละเอียดสินค้า3',
         },
         {
           id: 16,
           productName: 'chair16',
-          detiel: 'รายละเอียดสินค้า3',
+          detail: 'รายละเอียดสินค้า3',
         },
         {
           id: 17,
           productName: 'chair16',
-          detiel: 'รายละเอียดสินค้า3',
+          detail: 'รายละเอียดสินค้า3',
         },
         {
           id: 18,
           productName: 'chair18',
-          detiel: 'รายละเอียดสินค้า3',
+          detail: 'รายละเอียดสินค้า3',
         },
       ],
       imgItems: [
