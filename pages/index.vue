@@ -136,6 +136,7 @@ export default {
           id: 9,
           productName: 'chair8',
           detail: 'รายละเอียดสินค้า3',
+          price: '350$',
         },
         {
           id: 10,
