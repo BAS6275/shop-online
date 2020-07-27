@@ -1,7 +1,7 @@
 <template>
   <div>
     <div max-width="auto" class="mr-top-2">
-      <v-carousel height="300" show-arrows-on-hover cycle>
+      <v-carousel height="300" show-arrows-on-hover cycle hide-delimiters>
         <v-carousel-item
           v-for="(item, i) in imgItems"
           :key="i"
@@ -23,8 +23,7 @@
       >
         <v-hover v-slot:default="{ hover }">
           <v-card :elevation="hover ? 16 : 2" class="mr-top-2">
-            <!-- มีปัญหา -->
-            <v-img class="setPosition" :src="item.src"></v-img>
+            <v-img :src="item.src" contain aspect-ratio="1.5"></v-img>
 
             <v-card-title>{{ item.productName }}</v-card-title>
             <v-card-text>
@@ -64,7 +63,7 @@
     <!-- end of picture  -->
     <div class="text-center">
       <v-btn
-        class="ma-2"
+        class="ma-5"
         tile
         outlined
         color="success"
@@ -101,87 +100,118 @@ export default {
           productName: 'chair3',
           price: '350$',
           detail: 'รายละเอียดสินค้า3',
+          src:
+            'https://lh3.googleusercontent.com/proxy/I-fIo6evn-fnpuS5XEzKxGZTVMvx2W3H9OOt8nW5lgMbHhAXvqUO8LLKcqibLFnp8Chj-zXPEhhhIfriqNTC34JclQb5_7TLjulEWwXaCGbn3F91w1fNdpcfq5L2w7ZhMxlpqw',
         },
         {
           id: 4,
           productName: 'chair4',
           price: '150$',
           detail: 'รายละเอียดสินค้า3',
+          src:
+            'https://sbmedia3.sbdesignsquare.com/output/images/gallery/50779/f7f61a845c5c8dad2f13334dea918118.jpg',
         },
         {
           id: 5,
           productName: 'chair5',
           price: '400$',
           detail: 'รายละเอียดสินค้า3',
+          src:
+            'https://yusabuy.com/wp-content/uploads/2019/02/Koncept-Furniture-%E0%B8%A0%E0%B8%B2%E0%B8%9E%E0%B8%97%E0%B8%B5%E0%B9%88-18.jpg',
         },
         {
           id: 6,
           productName: 'chair6',
           price: '65$',
           detail: 'รายละเอียดสินค้า3',
+          src:
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSXW-KrbwuGfP08oGw1OhsVDBNF4UM-zAAWYA&usqp=CAU',
         },
         {
           id: 7,
           productName: 'chair7',
           price: '350$',
           detail: 'รายละเอียดสินค้า3',
+          src:
+            'https://www.dooddot.com/wp-content/uploads/2017/09/1-Baker-JLD_Roomscene-16.jpg',
         },
         {
           id: 8,
           productName: 'chair8',
           detail: 'รายละเอียดสินค้า3',
           price: '350$',
+          src:
+            'https://i.pinimg.com/originals/b4/4d/0c/b44d0cbf1357e529416e7718ba7d1cc8.jpg',
         },
         {
           id: 9,
           productName: 'chair8',
           detail: 'รายละเอียดสินค้า3',
           price: '350$',
+          src: 'https://www.mangosiam.com/images/slide/2.jpg',
         },
         {
           id: 10,
           productName: 'chair8',
           detail: 'รายละเอียดสินค้า3',
+          price: '350$',
+          src: 'https://www.mangosiam.com/images/slide/2.jpg',
         },
         {
           id: 11,
           productName: 'chair8',
           detail: 'รายละเอียดสินค้า3',
+          price: '350$',
+          src: 'https://www.mangosiam.com/images/slide/2.jpg',
         },
         {
           id: 12,
           productName: 'chair8',
           detail: 'รายละเอียดสินค้า3',
+          price: '350$',
+          src: 'https://www.mangosiam.com/images/slide/2.jpg',
         },
         {
           id: 13,
           productName: 'chair8',
           detail: 'รายละเอียดสินค้า3',
+          price: '350$',
+          src: 'https://www.mangosiam.com/images/slide/2.jpg',
         },
         {
           id: 14,
           productName: 'chair8',
           detail: 'รายละเอียดสินค้า3',
+          price: '350$',
+          src: 'https://www.mangosiam.com/images/slide/2.jpg',
         },
         {
           id: 15,
           productName: 'chair15',
           detail: 'รายละเอียดสินค้า3',
+          price: '350$',
+          src: 'https://www.mangosiam.com/images/slide/2.jpg',
         },
         {
           id: 16,
           productName: 'chair16',
           detail: 'รายละเอียดสินค้า3',
+          price: '350$',
+          src: 'https://www.mangosiam.com/images/slide/2.jpg',
         },
         {
           id: 17,
           productName: 'chair16',
           detail: 'รายละเอียดสินค้า3',
+          price: '350$',
+          src: 'https://www.mangosiam.com/images/slide/2.jpg',
         },
         {
           id: 18,
           productName: 'chair18',
           detail: 'รายละเอียดสินค้า3',
+          price: '350$',
+          src: 'https://www.mangosiam.com/images/slide/2.jpg',
         },
       ],
       imgItems: [
@@ -230,10 +260,5 @@ export default {
 
 .mr-top-banner {
   margin-top: 5px;
-}
-
-.setPosition {
-  max-width: 100%;
-  height: auto !important;
 }
 </style>

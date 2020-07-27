@@ -1,19 +1,30 @@
 <template>
-  <v-app style="background-color: #fff;">
+  <v-app>
     <div>
-      <v-navigation-drawer v-model="toggleMenu" temporary absolute>
+      <v-navigation-drawer
+        v-model="toggleMenu"
+        width="180"
+        color="orange darken-4"
+        temporary
+        absolute
+      >
         <v-list>
+          <div class="text-center">
+            <v-icon large color="white">
+              mdi-shield-home
+            </v-icon>
+          </div>
           <v-list-item
             v-for="btn in menuList"
             :key="btn.id"
             @click="toggleMenu = false"
           >
-            {{ btn.name }}
+            <span class="white--text">{{ btn.name }}</span>
           </v-list-item>
         </v-list>
       </v-navigation-drawer>
       <v-app-bar color="orange darken-4" dense sticky app>
-        <v-icon large color="white">
+        <v-icon large color="white" class="d-none d-sm-flex">
           mdi-shield-home
         </v-icon>
         <v-app-bar-nav-icon
@@ -22,21 +33,21 @@
         ></v-app-bar-nav-icon>
 
         <div class="d-none d-sm-flex">
-          <v-btn v-for="btn in menuList" :key="btn.id" text>{{
-            btn.name
-          }}</v-btn>
+          <v-btn v-for="btn in menuList" :key="btn.id" text>
+            <span class="white--text">{{ btn.name }}</span>
+          </v-btn>
         </div>
 
         <v-spacer></v-spacer>
-        <v-btn icon>
+        <v-btn icon color="white">
           <v-icon>mdi-basket</v-icon>
         </v-btn>
 
-        <v-btn icon>
+        <v-btn icon color="white">
           <v-icon>mdi-magnify</v-icon>
         </v-btn>
 
-        <v-menu left bottom>
+        <!-- <v-menu left bottom>
           <template v-slot:activator="{ on, attrs }">
             <v-btn icon v-bind="attrs" v-on="on">
               <v-icon>mdi-dots-vertical</v-icon>
@@ -48,70 +59,37 @@
               <v-list-item-title>Option {{ n }}</v-list-item-title>
             </v-list-item>
           </v-list>
-        </v-menu>
+        </v-menu> -->
       </v-app-bar>
 
       <v-main>
         <nuxt />
       </v-main>
 
-      <v-footer color="orange darken-4" padless>
-        <v-row justify="center" no-gutters>
-          <v-col cols="12" sm="3" class="white--text benefit-link"
-            ><h4>รวมลิงค์ที่เป็นประโยชน์</h4>
-            <a>แคตตาล็อกและโบรชัวร์</a><br />
-            <a>แอพพลิเคชั่นอิเกีย</a><br />
-            <a>โปรแกรมออกแบบของอิเกีย</a><br />
-            <a>การรับประกันสินค้า</a><br />
-            <a>สโตร์อิเกียใกล้บ้านคุณ</a><br />
-            <a>ร้านอาหารอิเกีย</a><br />
-            <a>มุมอาหารและขนมสวีเดน</a><br />
-            <a>IKEA Family</a><br />
-            <a>IKEA Business</a><br
-          /></v-col>
-          <v-col cols="12" sm="3" class="white--text benefit-link"
-            ><h4>รวมลิงค์ที่เป็นประโยชน์</h4>
-            <a>แคตตาล็อกและโบรชัวร์</a><br />
-            <a>แอพพลิเคชั่นอิเกีย</a><br />
-            <a>โปรแกรมออกแบบของอิเกีย</a><br />
-            <a>การรับประกันสินค้า</a><br />
-            <a>สโตร์อิเกียใกล้บ้านคุณ</a><br />
-            <a>ร้านอาหารอิเกีย</a><br />
-            <a>มุมอาหารและขนมสวีเดน</a><br />
-            <a>IKEA Family</a><br />
-            <a>IKEA Business</a><br
-          /></v-col>
-          <v-col cols="12" sm="3" class="white--text benefit-link"
-            ><h4>รวมลิงค์ที่เป็นประโยชน์</h4>
-            <a>แคตตาล็อกและโบรชัวร์</a><br />
-            <a>แอพพลิเคชั่นอิเกีย</a><br />
-            <a>โปรแกรมออกแบบของอิเกีย</a><br />
-            <a>การรับประกันสินค้า</a><br />
-            <a>สโตร์อิเกียใกล้บ้านคุณ</a><br />
-            <a>ร้านอาหารอิเกีย</a><br />
-            <a>มุมอาหารและขนมสวีเดน</a><br />
-            <a>IKEA Family</a><br />
-            <a>IKEA Business</a><br
-          /></v-col>
-          <v-col cols="12" sm="3" class="white--text benefit-link"
-            ><h4>รวมลิงค์ที่เป็นประโยชน์</h4>
-            <a>แคตตาล็อกและโบรชัวร์</a><br />
-            <a>แอพพลิเคชั่นอิเกีย</a><br />
-            <a>โปรแกรมออกแบบของอิเกีย</a><br />
-            <a>การรับประกันสินค้า</a><br />
-            <a>สโตร์อิเกียใกล้บ้านคุณ</a><br />
-            <a>ร้านอาหารอิเกีย</a><br />
-            <a>มุมอาหารและขนมสวีเดน</a><br />
-            <a>IKEA Family</a><br />
-            <a>IKEA Business</a><br
-          /></v-col>
+      <v-footer color="orange darken-4" padless class="d-block">
+        <v-row justify="center" class="mx-12">
           <v-col
-            class="primary lighten-2 py-4 text-center white--text"
+            v-for="(item, index) in footerContentList"
+            :key="index"
             cols="12"
-          >
-            {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
+            sm="3"
+            class="white--text pa-4"
+            ><h4 class="pb-2">{{ item.title }}</h4>
+            <div
+              v-for="(i, iex) in item.detail"
+              :key="iex"
+              class="benefit-link"
+            >
+              <a>{{ i }}</a>
+            </div>
           </v-col>
         </v-row>
+        <div
+          class="footer-color py-4 text-center white--text d-block"
+          cols="12"
+        >
+          {{ new Date().getFullYear() }} — <strong>BasKritsanapong</strong>
+        </div>
       </v-footer>
     </div>
   </v-app>
@@ -121,10 +99,54 @@
 export default {
   data() {
     return {
-      dropdown_font: ['Arial', 'Calibri', 'Courier', 'Verdana'],
       clipped: false,
       drawer: false,
       fixed: false,
+      footerContentList: [
+        {
+          title: 'รวมลิงค์ที่เป็นประโยชน์',
+          detail: [
+            'แคตตาล็อกและโบรชัวร์',
+            'แอพพลิเคชั่นเรา',
+            'โปรแกรมออกแบบของเรา',
+            'การรับประกันสินค้า',
+            'สโตร์เราใกล้บ้านคุณ',
+            'ร้านอาหารเรา',
+            'มุมอาหารและขนมสวีเดน',
+          ],
+        },
+        {
+          title: 'แผนกบริการลูกค้า',
+          detail: [
+            'บริการของเรา',
+            'นโยบายเปลี่ยนคืนสินค้า',
+            'ติดตามสถานะสินค้า',
+            'ติดต่อเรา',
+            'คำถามที่พบบ่อย',
+          ],
+        },
+        {
+          title: 'เรื่องราวของเรา',
+          detail: [
+            'เกี่ยวกับเรา',
+            'ทุกๆ วันที่ยั่งยืน',
+            'การมีส่วนร่วมในชุมชน',
+            'ดีไซน์ที่ใส่ใจทุกแง่มุม',
+            'ร่วมงานกับเรา',
+          ],
+        },
+        {
+          title: 'ข่าวสาร',
+          detail: [
+            'ห้องข่าวประชาสัมพันธ์',
+            'การยืมสินค้า',
+            'ข้อมูลสื่อ',
+            'สินค้าที่ถูกเรียกคืน',
+            'ยึดให้แน่นหรือนำมาคืนได้',
+            'คำสงวนสิทธิ์',
+          ],
+        },
+      ],
       items: [
         {
           icon: 'mdi-apps',
@@ -145,19 +167,19 @@ export default {
       menuList: [
         {
           id: 1,
-          name: 'btn1',
+          name: 'Sale',
         },
         {
           id: 2,
-          name: 'btn2',
+          name: 'สินค้ามาใหม่',
         },
         {
           id: 3,
-          name: 'btn3',
+          name: 'โปรโมชั่น',
         },
         {
           id: 4,
-          name: 'btn4',
+          name: 'อื่นๆ',
         },
       ],
     }
@@ -174,5 +196,8 @@ export default {
 }
 .benefit-link > a {
   color: white !important;
+}
+.footer-color {
+  background-color: red;
 }
 </style>
