@@ -52,7 +52,7 @@
 
             <v-card-actions>
               <v-btn color="deep-purple lighten-2" text>
-                หยิบเข้าตระกร้า
+                เลือกชุดนี้
               </v-btn>
             </v-card-actions>
           </v-card>
@@ -82,134 +82,133 @@ export default {
       items: [
         {
           id: 1,
-          productName: 'chair',
-          detail: 'รายละเอียดสินค้า',
+          productName: 'ชุดห้อง',
+          detail: 'ประกอบด้วย เตียง ที่วางของหัวเตียง',
           price: '100$',
           src:
             'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQSPAYBDq_ogHF22hywk1jNI_TS_EgpYhMA6w&usqp=CAU',
         },
         {
           id: 2,
-          productName: 'chair2',
-          detail: 'รายละเอียดสินค้า2',
+          productName: 'ชุดห้อง2',
+          detail: 'ประกอบด้วย เตียง ที่วางของหัวเตียง',
           price: '250$',
           src: 'https://www.mangosiam.com/images/slide/2.jpg',
         },
         {
           id: 3,
-          productName: 'chair3',
+          productName: 'ชุดห้อง3',
           price: '350$',
-          detail: 'รายละเอียดสินค้า3',
-          src:
-            'https://lh3.googleusercontent.com/proxy/I-fIo6evn-fnpuS5XEzKxGZTVMvx2W3H9OOt8nW5lgMbHhAXvqUO8LLKcqibLFnp8Chj-zXPEhhhIfriqNTC34JclQb5_7TLjulEWwXaCGbn3F91w1fNdpcfq5L2w7ZhMxlpqw',
+          detail: 'ประกอบด้วย เตียง ที่วางของหัวเตียง',
+          src: 'https://www.mangosiam.com/images/slide/2.jpg',
         },
         {
           id: 4,
-          productName: 'chair4',
+          productName: 'ชุดห้อง4',
           price: '150$',
-          detail: 'รายละเอียดสินค้า3',
+          detail: 'ประกอบด้วย เตียง ที่วางของหัวเตียง',
           src:
             'https://sbmedia3.sbdesignsquare.com/output/images/gallery/50779/f7f61a845c5c8dad2f13334dea918118.jpg',
         },
         {
           id: 5,
-          productName: 'chair5',
+          productName: 'ชุดห้อง5',
           price: '400$',
-          detail: 'รายละเอียดสินค้า3',
+          detail: 'ประกอบด้วย เตียง ที่วางของหัวเตียง',
           src:
             'https://yusabuy.com/wp-content/uploads/2019/02/Koncept-Furniture-%E0%B8%A0%E0%B8%B2%E0%B8%9E%E0%B8%97%E0%B8%B5%E0%B9%88-18.jpg',
         },
         {
           id: 6,
-          productName: 'chair6',
+          productName: 'ชุดห้อง6',
           price: '65$',
-          detail: 'รายละเอียดสินค้า3',
+          detail: 'ประกอบด้วย เตียง ที่วางของหัวเตียง',
           src:
             'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSXW-KrbwuGfP08oGw1OhsVDBNF4UM-zAAWYA&usqp=CAU',
         },
         {
           id: 7,
-          productName: 'chair7',
+          productName: 'ชุดห้อง7',
           price: '350$',
-          detail: 'รายละเอียดสินค้า3',
+          detail: 'ประกอบด้วย เตียง ที่วางของหัวเตียง',
           src:
             'https://www.dooddot.com/wp-content/uploads/2017/09/1-Baker-JLD_Roomscene-16.jpg',
         },
         {
           id: 8,
-          productName: 'chair8',
-          detail: 'รายละเอียดสินค้า3',
+          productName: 'ชุดห้อง8',
+          detail: 'ประกอบด้วย เตียง ที่วางของหัวเตียง',
           price: '350$',
           src:
             'https://i.pinimg.com/originals/b4/4d/0c/b44d0cbf1357e529416e7718ba7d1cc8.jpg',
         },
         {
           id: 9,
-          productName: 'chair8',
-          detail: 'รายละเอียดสินค้า3',
+          productName: 'ชุดห้อง9',
+          detail: 'ประกอบด้วย เตียง ที่วางของหัวเตียง',
           price: '350$',
           src: 'https://www.mangosiam.com/images/slide/2.jpg',
         },
         {
           id: 10,
-          productName: 'chair8',
-          detail: 'รายละเอียดสินค้า3',
+          productName: 'ชุดห้อง10',
+          detail: 'ประกอบด้วย เตียง ที่วางของหัวเตียง',
           price: '350$',
           src: 'https://www.mangosiam.com/images/slide/2.jpg',
         },
         {
           id: 11,
-          productName: 'chair8',
-          detail: 'รายละเอียดสินค้า3',
+          productName: 'ชุดห้อง11',
+          detail: 'ประกอบด้วย เตียง ที่วางของหัวเตียง',
           price: '350$',
           src: 'https://www.mangosiam.com/images/slide/2.jpg',
         },
         {
           id: 12,
-          productName: 'chair8',
-          detail: 'รายละเอียดสินค้า3',
+          productName: 'ชุดห้อง12',
+          detail: 'ประกอบด้วย เตียง ที่วางของหัวเตียง',
           price: '350$',
           src: 'https://www.mangosiam.com/images/slide/2.jpg',
         },
         {
           id: 13,
-          productName: 'chair8',
-          detail: 'รายละเอียดสินค้า3',
+          productName: 'ชุดห้อง13',
+          detail: 'ประกอบด้วย เตียง ที่วางของหัวเตียง',
           price: '350$',
           src: 'https://www.mangosiam.com/images/slide/2.jpg',
         },
         {
           id: 14,
-          productName: 'chair8',
-          detail: 'รายละเอียดสินค้า3',
+          productName: 'ชุดห้อง14',
+          detail: 'ประกอบด้วย เตียง ที่วางของหัวเตียง',
           price: '350$',
           src: 'https://www.mangosiam.com/images/slide/2.jpg',
         },
         {
           id: 15,
-          productName: 'chair15',
-          detail: 'รายละเอียดสินค้า3',
+          productName: 'ชุดห้อง15',
+          detail: 'ประกอบด้วย เตียง ที่วางของหัวเตียง',
           price: '350$',
           src: 'https://www.mangosiam.com/images/slide/2.jpg',
         },
         {
           id: 16,
-          productName: 'chair16',
-          detail: 'รายละเอียดสินค้า3',
+          productName: 'ชุดห้อง16',
+          detail: 'ประกอบด้วย เตียง ที่วางของหัวเตียง',
           price: '350$',
           src: 'https://www.mangosiam.com/images/slide/2.jpg',
         },
         {
           id: 17,
-          productName: 'chair16',
-          detail: 'รายละเอียดสินค้า3',
+          productName: 'ชุดห้อง17',
+          detail: 'ประกอบด้วย เตียง ที่วางของหัวเตียง',
           price: '350$',
           src: 'https://www.mangosiam.com/images/slide/2.jpg',
         },
         {
           id: 18,
-          productName: 'chair18',
-          detail: 'รายละเอียดสินค้า3',
+          productName: 'ชุดห้อง18',
+          detail: 'ประกอบด้วย เตียง ที่วางของหัวเตียง',
           price: '350$',
           src: 'https://www.mangosiam.com/images/slide/2.jpg',
         },
